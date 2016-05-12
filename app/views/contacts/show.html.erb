@@ -4,8 +4,6 @@
     <p><%= @contact.email %></p>
      <p><%= @contact.message %></p>
     <p>Received at <%=   time_ago_in_words(@contact.created_at) %> ago</p>
-    <button type="button" class="btn btn-info">
          <%= link_to "Back",contacts_path,class:"btn btn-primary"%>
-    </button>
    </div>
 </div>
