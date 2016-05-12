@@ -1,18 +1,18 @@
 <div class="container">
-<p id="index"></p>
-	<div class="row">
-	    <div class="col-sm-3 col-md-6 col-lg-8">
-          <h2>Buddha born in Nepal</h2>
-         <%= image_tag "all_images/budda.jpg", width:"350",height:"250"%>
-	   </div>
-		<div class="col-sm-9 col-md-6 col-lg-4">
-		  <h2>Latest Articles</h2>
-		   <hr>
-      	  <% @article.each do |article| %>
-          <h5><%= link_to article.title,blog_path(article) %></h5>
-          <p>Published at <%= article.created_at.strftime('%B %d, %Y') %></p>
-         <hr>
-       <% end %>			
-		</div>
-   </div>
+  <p id="index"></p>
+  	<div class="row">
+  	    <div class="col-sm-3 col-md-6 col-lg-8">
+            <h2>Buddha born in Nepal</h2>
+           <%= image_tag "all_images/budda.jpg", width:"50%",height:"100%"%>
+  	   </div>
+  		<div class="col-sm-9 col-md-6 col-lg-4">
+  		  <h2>Latest Articles</h2>
+  		   <hr>
+        	  <% @article.each do |article| %>
+            <h5><%= link_to article.title,blog_path(article) %></h5>
+            <p>Published at <%= article.created_at.strftime('%B %d, %Y') %></p>
+           <hr>
+         <% end %>			
+  		</div>
+     </div>
 </div>
