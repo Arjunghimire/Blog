@@ -1,0 +1,33 @@
+<div class="container">
+   <div class="table-responsive">
+    <table class="table">
+      <caption><h4>All Messages (<%= @contact.count %>)</h4></caption>
+      <thead>
+      <tr>
+        <th>Fullname</th>
+        <th>Email</th>
+        <th>Message</th>
+        <th>Received at</th>
+        <th>Option</th>
+      </tr>
+      </thead>
+   <tbody>
+    <% @contact.each do |contact| %>
+    <tr>
+      <td><%= contact.name %></td>
+      <td><%= contact.email %></td>
+      <td><%= contact.message %></td>
+      <td><%= contact.created_at.strftime('%B %d, %Y') %></td>
+      <td><%= link_to "View",contact_path(contact),class:"btn btn-info" %>
+    <%= link_to "Delete",contact_path(contact),class:"btn btn-danger" , method: :delete,data: {confirm: "Are you sure ?"}%>
+      
+      </td>
+    </tr> 
+    <%end %>
+  </tbody>
+ </table>
+</div>
+  <br>
+   <%= link_to "Back",admins_path,class:"btn btn-primary" %>
+
+</div>

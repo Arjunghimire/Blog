@@ -1,0 +1,6 @@
+<%= simple_form_for @article,url: blogs_path do |f| %>
+  <%= f.input :title %>
+  <%= f.input :author %>
+  <%= f.input :body %>
+  <%= f.button :submit %>
+<% end %>

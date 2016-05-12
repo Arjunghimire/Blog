@@ -1,0 +1,44 @@
+body
+{
+	color:#000;
+}
+.link
+{
+	text-decoration: none;
+	font-size: 14px;
+}
+.link:hover
+{
+	color: #E21919;
+}
+.blog_index
+{
+	h2
+	{
+		  color: #F63700;
+	}
+	h3 > a
+	{
+       color: #383A73;
+	}
+	p.published
+	{
+		color:#818080;
+	}
+}
+.blog_show
+{
+	h2
+	{
+		  color: #FB5C3C;
+	}
+	h3
+	{
+		color: #37B6F1;
+
+	}
+	p.published
+	{
+		color:#818080;
+	}
+}

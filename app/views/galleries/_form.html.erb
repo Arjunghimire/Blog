@@ -1,0 +1,7 @@
+<%= simple_form_for @gallery, url: galleries_path do |form| %>
+  <%= form.input :title %>
+  <%= form.input :description %>
+  <%= form.input :image, as: :file %>
+    <%= form.button :submit %>
+
+<% end %>

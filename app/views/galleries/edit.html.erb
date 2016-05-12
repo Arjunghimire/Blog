@@ -1,0 +1,13 @@
+<div class="container">
+  <h2> Edit Gallery</h2>
+  <%= simple_form_for @gallery, url: gallery_path do |form| %>
+  <%= form.input :title %>
+  <%= form.input :description %>
+  <%= form.input :image, as: :file %>
+    <%= form.button :submit %>
+
+<% end %>
+  <br>
+   <%= link_to "Back",admins_path,class:"btn btn-primary" %>
+
+</div>

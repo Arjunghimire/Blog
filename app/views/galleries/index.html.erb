@@ -1,0 +1,19 @@
+<div class="container">
+   <h2>All Photos (<%= @gallery.count %>)</h2>
+   <hr>
+   <% if @gallery.count ==0 %>
+     <h3>No more photo yets !!!</h3>
+    <% else %>
+    <% @gallery.each do |gallery| %>
+  <div class="gallery_index">     
+      <h3><%= gallery.title %></h3>
+      <p><%= truncate(gallery.description,length: 20) %></p>
+      <% @image = image_tag gallery.image,size:"180",class:"images" %>
+      <p><%=link_to @image ,gallery_path(gallery) %></p>
+      <p class="published">Uploaded at <%= gallery.created_at.strftime('%B %d, %Y') %></p>
+	 	   <%= link_to "Full View",gallery_path(gallery), class:"btn btn-info" %>
+      <hr>
+   </div>   
+ <% end %>   
+ <% end %>   
+</div>

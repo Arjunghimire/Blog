@@ -1,0 +1,59 @@
+*
+{
+	font-family: Raleway;
+}
+h2
+{
+	color: #F63700;
+	text-align: left;
+}
+h3
+{
+	text-align: left;
+}
+body
+{
+	color:#000;
+}
+.main_header
+{
+	text-align: center;
+	background-image: url("all_images/second.jpg");
+	h1
+	{
+		color: #FFF;
+	}
+	
+	span
+	{
+		font-size: 25px;
+		color: #F61739;
+	}
+	p
+	{
+		color:#FDF10B;
+		font-size: 20px;
+	}
+}
+.menu_in_center,.navbar-header
+{
+	 background-color:#0287B0;
+	 background-position: center;
+	li a.link
+	{
+	 color: #FFF;
+	 font-size: 16px;
+	}
+	li a.link:hover
+	{
+		color:#F6FA0F;
+		color: #FFF;
+	}
+}
+.footer
+{
+
+	height: 20px;
+	color:#040007;
+	margin-bottom: 20px;
+}

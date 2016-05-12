@@ -1,0 +1,9 @@
+<div class="container">
+   <h2>Edit Article</h2>
+   <%= simple_form_for @article,url: blog_path do |f| %>
+ 	 <%= f.input :title %>
+ 	 <%= f.input :author %>
+ 	 <%= f.input :body %>
+ 	 <%= f.button :submit %>
+	<% end %>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+  <h3><%= @gallery.title %></h3>
+  <div class="media">
+    <a class="pull-left">
+       <%= image_tag @gallery.image,size:"200",class:"images" %>
+    </a>
+    <div class="media-body">
+     <div class="show_deatails">
+    <p><%= @gallery.description %></p>
+    <p>Uploaded at <%=   time_ago_in_words(@gallery.created_at) %> ago</p>
+    <% if admin_signed_in? %>
+    |
+     <%= link_to "Edit",edit_gallery_path %> |
+     <%= link_to "Delete",gallery_path,method: :delete, data:{confirm: "Are you sure ?"}%>
+    <% end %> 
+      </div>
+    </div>
+    </div>
+    <br><br>
+    <%= link_to "Back",galleries_path, class:"btn btn-primary"%>
+</div>

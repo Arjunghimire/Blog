@@ -1,0 +1,34 @@
+body
+{
+	color:#000;
+}
+.link_me:hover
+{
+	text-decoration: none;
+}
+
+.follow_us_img
+{
+	border-radius: 35px;
+	margin: auto;
+	width: 15%;
+	height: 15%;
+	padding:10px;
+}
+.follow_us_img:hover
+{
+	
+	transform: rotate(360deg);
+	transition: 1s;
+}
+.row
+{
+	h4
+	{
+		color: #05000F;
+	}
+}
+.center_align
+{
+	text-align: center;
+}

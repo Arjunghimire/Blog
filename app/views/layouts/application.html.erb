@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<!-- Header -->
+<div class="main_header">
+    <div class="container">
+		<h1>Arjun Ghimire's Blog</h1>
+		<p> </p>
+		<p>I am a Designer and Developer.I <span>&hearts;</span> developing websites !!!</p>
+    </div>
+</div>
+<!-- Navigation Menu -->
+
+	<nav class="navbar navbar-default" role="navigation">
+	   <div class="navbar-header">
+	     <button type="button" class="navbar-toggle" data-toggle="collapse"
+		  data-target="#example-navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		 </button>
+		 
+	   </div>
+	  <div class="menu_in_center">
+	   <div class="container">
+	    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+			  <ul class="nav navbar-nav">
+			   <li><%= link_to "Home",welcome_index_path, class:"link" %></li>
+			   <li><%= link_to "About Me",abouts_path,class:"link" %></li>
+			   <li><%= link_to "Blog",blogs_path,class:"link" %></li>
+			   <li><%= link_to "Gallery",galleries_path,class:"link" %></li>
+			   <li><%= link_to "Contact Me",new_contact_path,class:"link" %></li>
+			   <% if admin_signed_in? %>
+			      <li><%= link_to "Admin Panel",admins_path,class:"link" %></li> 
+			   <% end %>
+			   </ul>
+		 </div>
+		</div>
+	</div>
+</nav>
+
+<%= yield %>
+<hr/>
+<div class="footer">
+	<div class="container">
+		<div> Copyright &copy; Arjun Ghimire's Blog All right reserved</div>		  
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<div class="container">
+	<div class="row">
+	   <div class="col-sm-3 col-md-6 col-lg-8">
+	    <h2>Google Map</h2>
+	    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56549.0532768031!2d83.4066145445864!3d27.645698629873408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3996858b6cd2c31f%3A0x8f373b8951ee2d7e!2sMotipur%2C+32500%2C+Nepal!5e0!3m2!1sen!2sin!4v1462968360524" width="100%" height="100%" frameborder="0" style="border:3" allowfullscreen></iframe>
+	    </p>
+	    <hr>
+		 <h2>Say Something to me !!!</h2>
+ 			<% if flash[:notice] %>
+               <div class="notice"><%= flash[:notice] %></div>
+            <% end %> 
+  			 <br>
+ 		  <%= render 'form' %>
+ 		  <div>
+            
+ 		  </div>
+ 		</div>
+ 		<div class="col-sm-9 col-md-6 col-lg-4">
+ 		   <h2>Address</h2>
+ 		   <address>
+			<strong>Arjun Ghimire's Blog</strong><br><br>
+			Butwal- 20,Rupandehi,Nepal<br>
+			<br>
+			<abbr title="Phone">Phone Number:</abbr> 9867753394
+			</address>
+				<hr>
+ 		   <h3>Follow me </h3>
+				<a class="link_me" href="https://www.facebook.com/arjun.ghimire.1044" target="new" >
+					  <%= image_tag "all_images/fb.jpg" ,class:"follow_us_img" %>
+				</a>
+				<a class="link_me" href="https://github.com/Arjunghimire" target="new" >
+					  <%= image_tag "all_images/gt.jpg" ,class:"follow_us_img" %>
+				</a>
+				<a class="link_me" href="https://plus.google.com/u/0/107466155823181661180" target="new" >
+					  <%= image_tag "all_images/gp.jpg" ,class:"follow_us_img" %>
+				</a>
+				<a class="link_me" href="https://twitter.com/ArjunRazzGhimir" target="new">	
+					   <%= image_tag "all_images/tw.jpg",class:"follow_us_img"  %>
+				</a>
+				
+		</div>
+ 	</div>
+</div>

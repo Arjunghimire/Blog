@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="blog_index">
+   <h2>All Articles (<%= @article.count %>)</h2>
+   <hr>
+   <% if @article.count ==0 %>
+     <h3>No more articles yets !!!</h3>
+    <% else %>
+    <% @article.each do |article| %>
+      <h3><%=link_to article.title,blog_path(article) %></h3>
+      <p><%= truncate(article.body,length: 300) %></p>
+      <p>Author By <%= article.author %></p>
+      <p class="published">Published at <%= article.created_at.strftime('%B %d, %Y') %></p>
+	 	   <%= link_to "See More",blog_path(article), class:"btn btn-info" %>
+      <hr>
+    <% end %>
+    <% end %>
+    </div>
+</div>
