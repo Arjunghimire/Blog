@@ -6,7 +6,6 @@
     <p class="published">Published at <%=   time_ago_in_words(@article.created_at) %> ago</p>
     <%= link_to "Back",blogs_path, class:"btn btn-primary"%>
     <% if admin_signed_in? %>
-    |
      <%= link_to "Edit",edit_blog_path %> |
      <%= link_to "Delete",blog_path,method: :delete, data:{confirm: "Are you sure ?"}%>
     <% end %>

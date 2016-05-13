@@ -38,7 +38,7 @@ Rails.application.configure do
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.
-  # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
+   config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
@@ -78,4 +78,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.serve_static_assets = true
+
+  RAILS_ENV=production bundle exec rake assets:precompile
 end
